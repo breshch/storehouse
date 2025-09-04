@@ -3,74 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Надёжное хранение грузов</title>
+  <title>Складское хранение грузов | Надёжное хранение в Москве</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary-color: #ff7b00;
+      --primary-dark: #e66e00;
+      --secondary-color: #2c3e50;
+      --light-color: #f5f5f5;
+      --dark-color: #333;
+      --shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: var(--light-color);
+      color: var(--dark-color);
       text-align: center;
     }
-    header {
-      background: #ff7b00;
-      color: white;
-      padding: 20px;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
+    
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 30px 20px;
+      box-shadow: var(--shadow);
+    }
+    
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 2.2rem;
     }
+    
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
     main {
-      padding: 20px;
+      padding: 30px 0;
     }
-    img {
-      max-width: 90%;
-      height: auto;
+    
+    .hero {
+      margin-bottom: 40px;
+    }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #777;
+      font-style: italic;
     }
-    .contacts {
-      margin-top: 20px;
-      background: #fff;
-      padding: 20px;
+    
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    
+    .feature {
+      background: white;
+      padding: 25px;
       border-radius: 10px;
-      display: inline-block;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s;
     }
-    .contacts p {
-      margin: 5px 0;
-      font-size: 16px;
+    
+    .feature:hover {
+      transform: translateY(-5px);
     }
-    .contacts a {
+    
+    .feature h3 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    
+    .contacts {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #ff7b00;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    
+    .contacts h2 {
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+    
+    .contact-info {
+      margin: 15px 0;
+      text-align: left;
+    }
+    
+    .contact-info p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 25px;
+      background: var(--primary-color);
       color: white;
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.3s;
+      font-weight: bold;
     }
-    .contacts a:hover {
-      background: #e66e00;
+    
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+    
+    footer {
+      background: var(--secondary-color);
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-image {
+        height: 300px;
+      }
+      
+      .btn {
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 250px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Надёжное хранение грузов</h1>
-  </header>
-  <main>
-    <img src="A_Russian-language_digital_advertisement_features_.png" alt="Надёжное хранение грузов">
-    <div class="contacts">
-      <h2>Связаться с нами</h2>
-      <p>📞 Телефон: +7 (926) 432-35-19</p>
-      <p>📧 Email: breshch@gmail.com</p>
-      <a href="tel:+79264323519">Позвонить</a>
-      <a href="mailto:breshch@gmail.com">Написать</a>
+    <div class="container">
+      <h1>Надёжное хранение грузов в Москве</h1>
+      <p>Современные складские помещения с полным комплексом услуг</p>
     </div>
+  </header>
+  
+  <main class="container">
+    <section class="hero">
+      <div class="hero-image">
+        Изображение склада (требуется загрузка)
+      </div>
+      
+      <h2>Ваш груз в надёжных руках</h2>
+      <p>Предоставляем услуги ответственного хранения товаров, документов и личных вещей</p>
+    </section>
+    
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Охраняемые помещения</h3>
+        <p>Круглосуточная охрана и видеонаблюдение обеспечивают полную сохранность вашего груза</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">🌡️</div>
+        <h3>Различные условия хранения</h3>
+        <p>Отапливаемые и неотапливаемые помещения для разных категорий товаров</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Логистические услуги</h3>
+        <p>Приём и отгрузка товаров, погрузочно-разгрузочные работы</p>
+      </div>
+    </section>
+    
+    <section class="contacts">
+      <h2>Связаться с нами</h2>
+      
+      <div class="contact-info">
+        <p>📞 Телефон: <a href="tel:+79264323519">+7 (926) 432-35-19</a></p>
+        <p>📧 Email: <a href="mailto:breshch@gmail.com">breshch@gmail.com</a></p>
+        <p>📍 Адрес: Москва, складской комплекс "Логистик"</p>
+      </div>
+      
+      <a href="tel:+79264323519" class="btn">Позвонить нам</a>
+      <a href="mailto:breshch@gmail.com" class="btn btn-outline">Написать email</a>
+    </section>
   </main>
+  
+  <footer>
+    <div class="container">
+      <p>© 2023 Складское хранение грузов. Все права защищены.</p>
+    </div>
+  </footer>
 </body>
 </html>
