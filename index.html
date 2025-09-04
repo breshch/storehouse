@@ -61,30 +61,47 @@
     .hero {
       margin-bottom: 40px;
       text-align: center;
+      position: relative;
+    }
+    
+    .hero-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
     
     .hero-image {
       width: 100%;
-      max-width: 900px;
       height: 400px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      margin: 0 auto 20px;
-      border: 5px solid white;
+      display: block;
+      filter: brightness(0.8) contrast(1.1);
     }
     
-    .hero h2 {
-      color: var(--secondary-color);
-      margin-bottom: 15px;
-      font-size: 2rem;
+    .hero-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 30px 20px 20px;
+      text-align: center;
     }
     
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 800px;
+    .hero-text h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+    
+    .hero-text p {
+      max-width: 600px;
       margin: 0 auto;
-      color: #555;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
     
     .features {
@@ -202,6 +219,14 @@
         height: 300px;
       }
       
+      .hero-text {
+        padding: 20px 15px 15px;
+      }
+      
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+      
       .contacts {
         padding: 25px;
       }
@@ -230,29 +255,32 @@
   
   <main class="container">
     <section class="hero">
-      <img src="dc222719-1bf7-4b81-999e-0677a6a18598.png" alt="Складское помещение для хранения грузов" class="hero-image">
-      
-      <h2>Ваш груз в надёжных руках</h2>
-      <p>Предоставляем услуги ответственного хранения товаров, документов и личных вещей. Наши современные складские комплексы отвечают всем требованиям безопасности и удобства.</p>
+      <div class="hero-container">
+        <img src="https://storehouse-jlkzpxjz5-alexeys-projects-607b5497.vercel.app/dc222719-1bf7-4b81-999e-0677a6a18598.png" alt="Складское помещение для хранения грузов" class="hero-image">
+        <div class="hero-text">
+          <h2>Ваш груз в надёжных руках</h2>
+          <p>Ответственное хранение товаров, документов и личных вещей в современных складских комплексах</p>
+        </div>
+      </div>
     </section>
     
     <section class="features">
       <div class="feature">
         <div class="feature-icon">📦</div>
         <h3>Охраняемые помещения</h3>
-        <p>Круглосуточная охрана и видеонаблюдение обеспечивают полную сохранность вашего груза. Современные системы контроля доступа.</p>
+        <p>Круглосуточная охрана и видеонаблюдение обеспечивают полную сохранность вашего груза</p>
       </div>
       
       <div class="feature">
         <div class="feature-icon">🌡️</div>
         <h3>Различные условия хранения</h3>
-        <p>Отапливаемые и неотапливаемые помещения для разных категорий товаров. Контроль температуры и влажности.</p>
+        <p>Отапливаемые и неотапливаемые помещения для разных категорий товаров</p>
       </div>
       
       <div class="feature">
         <div class="feature-icon">🚚</div>
         <h3>Логистические услуги</h3>
-        <p>Приём и отгрузка товаров, погрузочно-разгрузочные работы. Полный комплекс складских услуг.</p>
+        <p>Приём и отгрузка товаров, погрузочно-разгрузочные работы</p>
       </div>
     </section>
     
