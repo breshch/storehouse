@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Складское хранение грузов | Надёжное хранение в Москве</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary-color: #ff7b00;
@@ -21,11 +22,10 @@
     }
     
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       background: var(--light-color);
       color: var(--dark-color);
-      text-align: center;
     }
     
     .container {
@@ -35,21 +35,23 @@
     }
     
     header {
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
       color: white;
       padding: 30px 20px;
       box-shadow: var(--shadow);
+      text-align: center;
     }
     
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
     
     header p {
       margin: 10px 0 0;
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      opacity: 0.95;
     }
     
     main {
@@ -58,100 +60,114 @@
     
     .hero {
       margin-bottom: 40px;
+      text-align: center;
     }
     
     .hero-image {
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
       height: 400px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: var(--shadow);
-      margin-bottom: 20px;
-      background-color: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin: 0 auto 20px;
-      color: #777;
-      font-style: italic;
+      border: 5px solid white;
+    }
+    
+    .hero h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
     }
     
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      margin: 40px 0;
+      gap: 25px;
+      margin: 50px 0;
     }
     
     .feature {
       background: white;
-      padding: 25px;
-      border-radius: 10px;
+      padding: 30px 25px;
+      border-radius: 12px;
       box-shadow: var(--shadow);
       flex: 1 1 300px;
       max-width: 350px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
     
     .feature:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     
     .feature h3 {
       color: var(--secondary-color);
-      margin-bottom: 15px;
+      margin: 15px 0;
+      font-size: 1.4rem;
     }
     
     .feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      font-size: 2.8rem;
       color: var(--primary-color);
+      margin-bottom: 15px;
     }
     
     .contacts {
       background: white;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 40px;
+      border-radius: 12px;
       box-shadow: var(--shadow);
-      display: inline-block;
-      max-width: 500px;
-      margin: 20px auto;
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
     }
     
     .contacts h2 {
       color: var(--secondary-color);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
     }
     
     .contact-info {
-      margin: 15px 0;
-      text-align: left;
+      margin: 20px 0;
     }
     
     .contact-info p {
-      margin: 10px 0;
+      margin: 15px 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
+      font-size: 1.1rem;
     }
     
     .btn {
       display: inline-block;
-      margin: 10px 5px;
-      padding: 12px 25px;
+      margin: 12px 8px;
+      padding: 14px 28px;
       background: var(--primary-color);
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
       font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     
     .btn:hover {
       background: var(--primary-dark);
+      transform: translateY(-2px);
     }
     
     .btn-outline {
@@ -165,27 +181,41 @@
       color: white;
     }
     
+    .btn i {
+      margin-right: 8px;
+    }
+    
     footer {
       background: var(--secondary-color);
       color: white;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 25px;
+      margin-top: 50px;
+      text-align: center;
     }
     
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
       
       .hero-image {
         height: 300px;
       }
       
+      .contacts {
+        padding: 25px;
+      }
+      
+      .contact-info p {
+        flex-direction: column;
+        gap: 5px;
+      }
+      
       .btn {
         display: block;
-        margin: 10px auto;
+        margin: 12px auto;
         width: 100%;
-        max-width: 250px;
+        max-width: 280px;
       }
     }
   </style>
@@ -200,31 +230,29 @@
   
   <main class="container">
     <section class="hero">
-      <div class="hero-image">
-        Изображение склада (требуется загрузка)
-      </div>
+      <img src="dc222719-1bf7-4b81-999e-0677a6a18598.png" alt="Складское помещение для хранения грузов" class="hero-image">
       
       <h2>Ваш груз в надёжных руках</h2>
-      <p>Предоставляем услуги ответственного хранения товаров, документов и личных вещей</p>
+      <p>Предоставляем услуги ответственного хранения товаров, документов и личных вещей. Наши современные складские комплексы отвечают всем требованиям безопасности и удобства.</p>
     </section>
     
     <section class="features">
       <div class="feature">
         <div class="feature-icon">📦</div>
         <h3>Охраняемые помещения</h3>
-        <p>Круглосуточная охрана и видеонаблюдение обеспечивают полную сохранность вашего груза</p>
+        <p>Круглосуточная охрана и видеонаблюдение обеспечивают полную сохранность вашего груза. Современные системы контроля доступа.</p>
       </div>
       
       <div class="feature">
         <div class="feature-icon">🌡️</div>
         <h3>Различные условия хранения</h3>
-        <p>Отапливаемые и неотапливаемые помещения для разных категорий товаров</p>
+        <p>Отапливаемые и неотапливаемые помещения для разных категорий товаров. Контроль температуры и влажности.</p>
       </div>
       
       <div class="feature">
         <div class="feature-icon">🚚</div>
         <h3>Логистические услуги</h3>
-        <p>Приём и отгрузка товаров, погрузочно-разгрузочные работы</p>
+        <p>Приём и отгрузка товаров, погрузочно-разгрузочные работы. Полный комплекс складских услуг.</p>
       </div>
     </section>
     
@@ -232,13 +260,26 @@
       <h2>Связаться с нами</h2>
       
       <div class="contact-info">
-        <p>📞 Телефон: <a href="tel:+79264323519">+7 (926) 432-35-19</a></p>
-        <p>📧 Email: <a href="mailto:breshch@gmail.com">breshch@gmail.com</a></p>
-        <p>📍 Адрес: Москва, складской комплекс "Логистик"</p>
+        <p>
+          <i class="fas fa-phone"></i>
+          Телефон: <a href="tel:+79264323519">+7 (926) 432-35-19</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          Email: <a href="mailto:breshch@gmail.com">breshch@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Адрес: Москва, складской комплекс "Логистик"
+        </p>
       </div>
       
-      <a href="tel:+79264323519" class="btn">Позвонить нам</a>
-      <a href="mailto:breshch@gmail.com" class="btn btn-outline">Написать email</a>
+      <a href="tel:+79264323519" class="btn">
+        <i class="fas fa-phone"></i> Позвонить нам
+      </a>
+      <a href="mailto:breshch@gmail.com" class="btn btn-outline">
+        <i class="fas fa-envelope"></i> Написать email
+      </a>
     </section>
   </main>
   
